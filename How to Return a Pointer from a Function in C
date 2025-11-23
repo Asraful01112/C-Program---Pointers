@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int* createNumber() {
+    int *p = malloc(sizeof(int));
+    *p = 100;
+    return p;
+}
+
+int main() {
+    int *num = createNumber();
+    printf("Value = %d\n", *num);
+
+    free(num);
+    return 0;
+}
